@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# This line was added by me
+AUTH_USER_MODEL = 'user.User'
+
+# The two lines of code below were added by me
+USE_TZ = True
+TIME_ZONE = 'UTC'  # Or your preferred timezone
+
 
 # Application definition
 
@@ -37,9 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', # added for rest api
+    'rest_framework',
     'user',
-    ]
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
